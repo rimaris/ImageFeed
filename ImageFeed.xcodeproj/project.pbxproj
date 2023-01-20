@@ -63,8 +63,8 @@
 			children = (
 				6F08F6892979C3D000917764 /* ImagesList */,
 				6F08F651297959F600917764 /* AppDelegate.swift */,
-				6F08F68A2979D0EB00917764 /* Main.storyboard */,
 				6F08F653297959F600917764 /* SceneDelegate.swift */,
+				6F08F68A2979D0EB00917764 /* Main.storyboard */,
 				6F08F65A297959F800917764 /* Assets.xcassets */,
 				6F08F65C297959F800917764 /* LaunchScreen.storyboard */,
 				6F08F65F297959F800917764 /* Info.plist */,

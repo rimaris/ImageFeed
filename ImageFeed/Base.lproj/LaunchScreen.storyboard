@@ -18,18 +18,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_logo" translatesAutoresizingMaskIntoConstraints="NO" id="n6n-NR-x9N">
-                                <rect key="frame" x="157.66666666666666" y="383.66666666666669" width="75" height="77"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="75" id="Tqg-EG-jw8"/>
-                                    <constraint firstAttribute="height" constant="77" id="m8U-UQ-Nj2"/>
-                                </constraints>
+                                <rect key="frame" x="158.66666666666666" y="391" width="73" height="75"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="YP Black"/>
                         <constraints>
-                            <constraint firstItem="n6n-NR-x9N" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ILB-Ig-zSS"/>
-                            <constraint firstItem="n6n-NR-x9N" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="zDb-CO-XUR"/>
+                            <constraint firstItem="n6n-NR-x9N" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ILB-Ig-zSS"/>
+                            <constraint firstItem="n6n-NR-x9N" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="zDb-CO-XUR"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -39,7 +35,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="splash_screen_logo" width="25" height="26"/>
+        <image name="splash_screen_logo" width="72.666664123535156" height="75.333335876464844"/>
         <namedColor name="YP Black">
             <color red="0.10196078431372549" green="0.10588235294117647" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

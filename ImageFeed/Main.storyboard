@@ -31,6 +31,7 @@
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" image="0" translatesAutoresizingMaskIntoConstraints="NO" id="CFg-aC-Uu2">
                                                     <rect key="frame" x="16" y="4" width="361" height="216"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="16"/>
@@ -39,14 +40,14 @@
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcw-x6-yUF" userLabel="Like Button">
-                                                    <rect key="frame" x="367" y="4" width="10" height="22"/>
+                                                    <rect key="frame" x="335" y="4" width="42" height="42"/>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                     <state key="normal">
                                                         <imageReference key="image" image="like_button_on" symbolScale="default"/>
                                                     </state>
                                                 </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27 августа 2022" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNH-fC-r44" userLabel="Date Label">
-                                                    <rect key="frame" x="8" y="196" width="101.66666666666667" height="16"/>
+                                                    <rect key="frame" x="24.000000000000007" y="196" width="101.66666666666669" height="16"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor">
                                                         <string key="name">
@@ -55,9 +56,9 @@ YP White</string>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" name="YP Black"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
-                                                <constraint firstItem="CFg-aC-Uu2" firstAttribute="leading" secondItem="LNH-fC-r44" secondAttribute="leading" constant="8" id="4Aw-nU-k6p"/>
+                                                <constraint firstItem="LNH-fC-r44" firstAttribute="leading" secondItem="CFg-aC-Uu2" secondAttribute="leading" constant="8" id="6mR-4b-Bm4"/>
                                                 <constraint firstItem="CFg-aC-Uu2" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="LNH-fC-r44" secondAttribute="trailing" constant="8" id="BEl-Ce-ceJ"/>
                                                 <constraint firstAttribute="bottom" secondItem="CFg-aC-Uu2" secondAttribute="bottom" constant="4" id="MIP-DF-fbl"/>
                                                 <constraint firstItem="CFg-aC-Uu2" firstAttribute="bottom" secondItem="LNH-fC-r44" secondAttribute="bottom" constant="8" id="NLt-T5-UmJ"/>
@@ -102,7 +103,7 @@ YP White</string>
     </scenes>
     <resources>
         <image name="0" width="200" height="132"/>
-        <image name="like_button_on" width="10" height="8.6666669845581055"/>
+        <image name="like_button_on" width="42" height="42"/>
         <namedColor>
             <string key="name">
 YP White</string>

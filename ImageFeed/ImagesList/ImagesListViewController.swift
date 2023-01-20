@@ -4,13 +4,10 @@
 //
 //  Created by Мария Солодова on 19.01.2023.
 //
-
 import UIKit
 
 class ImagesListViewController: UIViewController {
-    
     @IBOutlet private var tableView: UITableView!
-    
     private let photosName: [String] = Array(0..<20).map{ "\($0)" }
     
     override func viewDidLoad() {
@@ -28,7 +25,6 @@ class ImagesListViewController: UIViewController {
 
 //MARK: - Extensions
 extension ImagesListViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {}
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -72,7 +68,6 @@ extension ImagesListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         configCell(for: imageListCell, with: indexPath)
-        
         return imageListCell
     }
 }
