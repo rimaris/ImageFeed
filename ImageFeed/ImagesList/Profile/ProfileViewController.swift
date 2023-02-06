@@ -13,9 +13,8 @@ final class ProfileViewController: UIViewController {
         let nameLabel = UILabel()
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.text = "Екатерина Новикова"
-        nameLabel.font = UIFont(name: "SF-Pro.ttf", size: 23)
         nameLabel.font = UIFont.boldSystemFont(ofSize: 23)
-        nameLabel.textColor = .white
+        nameLabel.textColor = .ypWhite
         return nameLabel
     }()
     
@@ -35,8 +34,8 @@ final class ProfileViewController: UIViewController {
         let loginNameLabel = UILabel()
         loginNameLabel.translatesAutoresizingMaskIntoConstraints = false
         loginNameLabel.text = "@ekaterina_nov"
-        loginNameLabel.font = UIFont(name: "SF-Pro.ttf", size: 13)
-        loginNameLabel.textColor = .gray
+        loginNameLabel.font = UIFont.systemFont(ofSize: 13)
+        loginNameLabel.textColor = .ypGray
         loginNameLabel.adjustsFontSizeToFitWidth = true
         loginNameLabel.minimumScaleFactor = 0.5
         loginNameLabel.numberOfLines = 1
@@ -47,11 +46,12 @@ final class ProfileViewController: UIViewController {
         let descriptionLabel = UILabel()
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
         descriptionLabel.text = "Hello, world!"
-        descriptionLabel.font = UIFont(name: "SF-Pro.ttf", size: 13)
-        descriptionLabel.textColor = .white
+        descriptionLabel.font = UIFont.systemFont(ofSize: 13)
+        descriptionLabel.textColor = .ypWhite
         descriptionLabel.adjustsFontSizeToFitWidth = true
+        descriptionLabel.lineBreakMode = .byWordWrapping
         descriptionLabel.minimumScaleFactor = 0.5
-        descriptionLabel.numberOfLines = 1
+        descriptionLabel.numberOfLines = 0
         return descriptionLabel
     }()
     
@@ -64,7 +64,7 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor(red: 26/255, green: 27/255, blue: 34/255, alpha: 1)
+        view.backgroundColor = .ypBlack
         setupHierarchy()
         setupLayout()
     }
@@ -83,20 +83,17 @@ final class ProfileViewController: UIViewController {
             imageView.heightAnchor.constraint(equalToConstant: 70),
             imageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 32),
             imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            nameLabel.widthAnchor.constraint(equalToConstant: 235),
-            nameLabel.heightAnchor.constraint(equalToConstant: 18),
             nameLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 8),
             nameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            loginNameLabel.widthAnchor.constraint(equalToConstant: 99),
-            loginNameLabel.heightAnchor.constraint(equalToConstant: 18),
+            nameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 124),
             loginNameLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 8),
             loginNameLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            descriptionLabel.widthAnchor.constraint(equalToConstant: 77),
-            descriptionLabel.heightAnchor.constraint(equalToConstant: 18),
+            loginNameLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 260),
             descriptionLabel.topAnchor.constraint(equalTo: loginNameLabel.bottomAnchor, constant: 8),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
-            logoutButton.widthAnchor.constraint(equalToConstant: 20),
-            logoutButton.heightAnchor.constraint(equalToConstant: 22),
+            descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 282),
+            logoutButton.widthAnchor.constraint(equalToConstant: 44),
+            logoutButton.heightAnchor.constraint(equalToConstant: 44),
             logoutButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -26),
             logoutButton.centerYAnchor.constraint(equalTo: imageView.centerYAnchor)
         ])
