@@ -7,7 +7,6 @@
 import UIKit
 import WebKit
 
-fileprivate let unsplashAuthorizeURLString = "https://unsplash.com/oauth/authorize"
 
 protocol WebViewViewControllerDelegate: AnyObject {
     func webViewViewController(_ vc: WebViewViewController, didAuthenticateWithCode code: String)
@@ -27,10 +26,10 @@ final class WebViewViewController: UIViewController {
         
         var urlComponents = URLComponents(string: unsplashAuthorizeURLString)!
         urlComponents.queryItems = [
-        URLQueryItem(name: "client_id", value: accessKey),
-        URLQueryItem(name: "redirect_uri", value: redirectURI),
-        URLQueryItem(name: "response_type", value: "code"),
-        URLQueryItem(name: "scope", value: accessScope)
+            URLQueryItem(name: "client_id", value: accessKey),
+            URLQueryItem(name: "redirect_uri", value: redirectURI),
+            URLQueryItem(name: "response_type", value: "code"),
+            URLQueryItem(name: "scope", value: accessScope)
         ]
         let url = urlComponents.url!
         
@@ -72,7 +71,7 @@ final class WebViewViewController: UIViewController {
 }
 
 extension WebViewViewController: WKNavigationDelegate {
-
+    
     func webView(
         _ webView: WKWebView,
         decidePolicyFor navigationAction: WKNavigationAction,

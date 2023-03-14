@@ -14,29 +14,29 @@ final class OAuth2Service {
     private let tokenStorage = OAuth2TokenStorage.shared
     
     private (set) var authToken: String? {
-           get {
-               return tokenStorage.token
-           }
-           set {
-               tokenStorage.token = newValue
-           }
-       }
-       
-func fetchAuthToken(_ code: String, completion: @escaping(Result<String, Error>) -> Void) {
-    let request = authTokenRequest(code: code)
-    let task = object(for: request) {[weak self] result in
-        guard let self = self else { return }
-        switch result {
-        case .success(let body):
-        let authToken = body.accessToken
-        self.authToken = authToken
-        completion(.success(authToken))
-        case .failure(let error):
-        completion(.failure(error))
+        get {
+            return tokenStorage.token
+        }
+        set {
+            tokenStorage.token = newValue
         }
     }
-    task.resume()
-}
+    
+    func fetchAuthToken(_ code: String, completion: @escaping(Result<String, Error>) -> Void) {
+        let request = authTokenRequest(code: code)
+        let task = object(for: request) {[weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let body):
+                let authToken = body.accessToken
+                self.authToken = authToken
+                completion(.success(authToken))
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+        task.resume()
+    }
 }
 
 private func authTokenRequest(code: String) -> URLRequest {
@@ -55,7 +55,7 @@ private func authTokenRequest(code: String) -> URLRequest {
 struct OAuthTokenResponseBody: Decodable {
     let accessToken, tokenType, scope: String
     let createdAt: Date
-   
+    
     enum CodingKeys: String, CodingKey {
         case accessToken = "access_token"
         case tokenType = "token_type"
@@ -100,11 +100,11 @@ enum NetworkError: Error {
 }
 
 extension URLSession {
-    func data(for request: URLRequest, complition: @escaping(Result<Data, Error>) -> Void) -> URLSessionTask {
+    func data(for request: URLRequest, completion: @escaping(Result<Data, Error>) -> Void) -> URLSessionTask {
         
         let fulfillCompletion: (Result<Data, Error>) -> Void = { result in
             DispatchQueue.main.async {
-                complition(result)
+                completion(result)
             }
         }
         

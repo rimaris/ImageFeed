@@ -13,13 +13,13 @@ final class OAuth2TokenStorage {
     
     var token: String? {
         get {
-            defaults.string(forKey: "bearerToken")
+            defaults.string(forKey: bearerTokenKey)
         }
         set {
             if let token = newValue {
-                defaults.set(newValue, forKey: "bearerToken")
+                defaults.set(token, forKey: bearerTokenKey)
             } else {
-                defaults.removeObject(forKey: "bearerToken")
+                defaults.removeObject(forKey: bearerTokenKey)
             }
         }
     }
