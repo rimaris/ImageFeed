@@ -70,6 +70,7 @@ extension ImagesListViewController {
         let isLiked = indexPath.row % 2 == 0
         let likeImage = isLiked ? UIImage(named: "like_button_on") : UIImage(named: "like_button_off")
         cell.likeButton.setImage(likeImage, for: .normal)
+        cell.selectionStyle = .none
     }
 }
 
